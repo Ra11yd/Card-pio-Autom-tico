@@ -90,7 +90,171 @@ nav a {
 .produto button:hover {
   background-color: #b71c1c;
 }
+.Bebidas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 6rem 2rem 2rem;
+}
 
+/* Cada produto */
+.Bebidas {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 250px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.Bebidas:hover {
+  transform: translateY(-5px);
+}
+
+.Bebidas img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.Bebidas h3 {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.Bebidas .preco {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #666;
+}
+
+.Bebidas button {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.Bebidas button:hover {
+  background-color: #b71c1c;
+}
+.Combos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 6rem 2rem 2rem;
+}
+
+/* Cada produto */
+.Combos {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 250px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.Combos:hover {
+  transform: translateY(-5px);
+}
+
+.Combos img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.Combos h3 {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.Combos .preco {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #666;
+}
+
+.Combos button {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.Combos button:hover {
+  background-color: #b71c1c;
+}
+.Temakis {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 6rem 2rem 2rem;
+}
+
+/* Cada produto */
+.Temakis {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 250px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.Temakis:hover {
+  transform: translateY(-5px);
+}
+
+.Temakis img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.Temakis h3 {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.Temakis .preco {
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  color: #666;
+}
+
+.Temakis button {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.Temakis button:hover {
+  background-color: #b71c1c;
+}
 /* Carrinho lateral */
 #carrinho {
   position: fixed;
@@ -260,35 +424,68 @@ nav a {
 
   <!-- Menu fixo -->
   <nav>
-    <a href="#produtos">Cardápio</a>
+    <a href="#Temakis">Temakis</a>
+     <a href="#Combos">Combos</a>
+      <a href="#Bebidas">Bebidas</a>
+       <a href="#Sobremesas">Sobremesas</a>
+       <a href="#Molhos">Molhos</a>
+       <a href="#Acessóroios">Acessórios</a>
     <a href="#carrinho" onclick="abrirCarrinho()">Carrinho</a>
   </nav>
 
   <h1 id="produtos" style="text-align:center; margin-bottom:1rem; color:#d32f2f;">Cardápio Sushi Tsuru</h1>
 
-  <section class="produtos">
-    <div class="produto">
+  <section class="produtos" id="Temakis">
+    <div class="Temakis">
       <img src="https://images.unsplash.com/photo-1562967916-eb82221dfb46?auto=format&fit=crop&w=400&q=80" alt="Temaki Salmão" />
       <h3>Temaki Salmão</h3>
-      <p class="preco">R$ 25.00</p>
+      <p class="preco">R$18.90</p>
       <button aria-label="Adicionar Temaki Salmão ao carrinho" onclick="adicionarAoCarrinho('Temaki Salmão', 25.00)">Adicionar</button>
     </div>
 
-    <div class="produto">
+    <div class="Temakis">
       <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=400&q=80" alt="Combo Especial" />
-      <h3>Combo Especial</h3>
-      <p class="preco">R$ 59.90</p>
+      <h3>Temaki Especial</h3>
+      <p class="preco">R$ 19.90</p>
       <button aria-label="Adicionar Combo Especial ao carrinho" onclick="adicionarAoCarrinho('Combo Especial', 59.90)">Adicionar</button>
     </div>
 
-    <div class="produto">
+    <div class="Temakis">
       <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=400&q=80" alt="Uramaki Califórnia" />
-      <h3>Uramaki Califórnia</h3>
+      <h3>Temaki Califórnia</h3>
       <p class="preco">R$ 19.90</p>
       <button aria-label="Adicionar Uramaki Califórnia ao carrinho" onclick="adicionarAoCarrinho('Uramaki Califórnia', 19.90)">Adicionar</button>
     </div>
+  
   </section>
+  <section class="produtos"id=Combos>
+<div class="Combos">
+      <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=400&q=80" alt="Uramaki Califórnia" />
+      <h3>Combo 1</h3>
+      <p class="preco">R$ 59.90</p>
+      <button aria-label="Adicionar Combo 1 ao carrinho" onclick="adicionarAoCarrinho('Uramaki Califórnia', 19.90)">Adicionar</button>
+    </div>
 
+    <div class="Combos">
+      <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=400&q=80" alt="Uramaki Califórnia" />
+      <h3>Combo 2</h3>
+      <p class="preco">R$ 79.90</p>
+      <button aria-label="Adicionar Combo 2 ao carrinho" onclick="adicionarAoCarrinho('Uramaki Califórnia', 19.90)">Adicionar</button>
+    </div>
+
+    <div class="Combos">
+      <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=400&q=80" alt="Uramaki Califórnia" />
+      <h3>Combo 3</h3>
+      <p class="preco">R$ 99.90</p>
+      <button aria-label="Adicionar Combo 3 ao carrinho" onclick="adicionarAoCarrinho('Uramaki Califórnia', 19.90)">Adicionar</button>
+    </div>
+    <div class="Combos">
+      <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=400&q=80" alt="Uramaki Califórnia" />
+      <h3>Combo 4</h3>
+      <p class="preco">R$ 115.90</p>
+      <button aria-label="Adicionar Combo 4 ao carrinho" onclick="adicionarAoCarrinho('Uramaki Califórnia', 19.90)">Adicionar</button>
+    </div>
+  </section>
   <!-- Carrinho lateral -->
   <aside id="carrinho" aria-label="Carrinho de compras">
     <h3>Seu Carrinho</h3>
