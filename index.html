@@ -704,23 +704,56 @@ nav {
     padding: 0.5rem 0;
   }
 }
+.menu-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.menu-scroll {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 0 1rem;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.menu-scroll::-webkit-scrollbar {
+  display: none; /* Esconde a barra no mobile */
+}
+
+.menu-scroll a {
+  flex: 0 0 auto;
+  text-decoration: none;
+  color: #d32f2f;
+  font-weight: bold;
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
 </style>
 <!-- Ícone WhatsApp SVG inline para botões -->
 </head>
 <body>
 
   <!-- Menu fixo -->
-  <nav>
-  <button class="menu-toggle" aria-label="Abrir menu">≡</button>
-  <div class="menu-links">
+ <nav class="menu-bar">
+  <div class="menu-scroll">
     <a href="#Bebidas">Bebidas</a>
     <a href="#Combos">Combos</a>
     <a href="#Temakis">Temakis</a>
     <a href="#Sobremesas">Sobremesas</a>
     <a href="#Molhos">Molhos</a>
     <a href="#Acessorios">Acessórios</a>
+    <!-- Adicione mais se quiser -->
   </div>
 </nav>
+
 
   <h1 id="produtos" style="text-align:center; margin-bottom:1rem; color:#d32f2f;">Cardápio Sushi House</h1>
 
