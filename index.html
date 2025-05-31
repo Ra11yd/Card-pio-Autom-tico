@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -640,27 +641,88 @@ nav {
     display: flex; /* mostra o menu quando ativo */
   }
 }
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
 
+/* Links do menu */
+.menu-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu-links a {
+  text-decoration: none;
+  color: #d32f2f;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Botão hamburguer */
+.menu-toggle {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #d32f2f;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .menu-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background: white;
+    width: 200px;
+    padding: 1rem;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.15);
+  }
+  .menu-links.active {
+    display: flex;
+  }
+  .menu-links a {
+    padding: 0.5rem 0;
+  }
+}
 </style>
 <!-- Ícone WhatsApp SVG inline para botões -->
 </head>
 <body>
 
   <!-- Menu fixo -->
+  <nav>
   <button class="menu-toggle" aria-label="Abrir menu">≡</button>
   <div class="menu-links">
-  <nav>
+    <a href="#Bebidas">Bebidas</a>
+    <a href="#Combos">Combos</a>
     <a href="#Temakis">Temakis</a>
-     <a href="#Combos">Combos</a>
-      <a href="#Bebidas">Bebidas</a>
-       <a href="#Sobremesas">Sobremesas</a>
-       <a href="#Molhos">Molhos</a>
-       <a href="#Acessorios">Acessórios</a>
-    <a href="#carrinho" onclick="abrirCarrinho()">Carrinho</a>
+    <a href="#Sobremesas">Sobremesas</a>
+    <a href="#Molhos">Molhos</a>
+    <a href="#Acessorios">Acessórios</a>
   </div>
-  </nav>
+</nav>
 
-  <h1 id="produtos" style="text-align:center; margin-bottom:1rem; color:#d32f2f;">Cardápio Sushi Tsuru</h1>
+  <h1 id="produtos" style="text-align:center; margin-bottom:1rem; color:#d32f2f;">Cardápio Sushi House</h1>
 
   <section class="produtos" id="Temakis">
     <div class="Temakis">
@@ -970,14 +1032,14 @@ nav {
   toggleBtn.addEventListener('click', () => {
     menu.classList.toggle('active');
   });
-  </script>
-<script>
-  const toggleBtn = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.menu-links');
+  // Seleciona elementos
+const menuToggle = document.querySelector('.menu-toggle');
+const menuLinks = document.querySelector('.menu-links');
 
-  toggleBtn.addEventListener('click', () => {
-    menu.classList.toggle('active');
-  });
-</script>
+// Alterna menu ativo
+menuToggle.addEventListener('click', () => {
+  menuLinks.classList.toggle('active');
+});
+  </script>
 </body>
 </html>
