@@ -709,7 +709,7 @@ nav {
   top: 0;
   width: 100%;
   background: #fff;
-  padding: 1rem 0;
+  padding: 1.5rem 0; /* Aumenta a altura do menu */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   overflow: hidden;
@@ -717,15 +717,15 @@ nav {
 
 .menu-scroll {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem; /* Espaço maior entre os itens */
   overflow-x: auto;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
 }
 
 .menu-scroll::-webkit-scrollbar {
-  display: none; /* Esconde a barra no mobile */
+  display: none;
 }
 
 .menu-scroll a {
@@ -733,14 +733,13 @@ nav {
   text-decoration: none;
   color: #d32f2f;
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.3rem; /* Aumenta o tamanho da fonte */
   white-space: nowrap;
 }
 </style>
 <!-- Ícone WhatsApp SVG inline para botões -->
 </head>
 <body>
-
   <!-- Menu fixo -->
  <nav class="menu-bar">
   <div class="menu-scroll">
