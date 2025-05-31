@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-<title>Sushi Tsuru - Cardápio</title>
+<title>Sushi House - Cardápio</title>
 <style>
 /* Reset básico */
 * {
@@ -550,77 +550,10 @@ nav a {
 
 /* Responsividade */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 0.8rem 1rem;
-    align-items: center;
-    font-size: 0.95rem;
-  }
-
-  .produtos,
-  .Bebidas,
-  .Combos,
-  .Temakis,
-  .Sobremesas,
-  .Molhos,
-  .Acessorios {
+  .produtos {
     flex-direction: column;
     align-items: center;
-    padding: 5rem 1rem 1rem;
-    gap: 1.5rem;
   }
-
-  .produto,
-  .Bebidas,
-  .Combos,
-  .Temakis,
-  .Sobremesas,
-  .Molhos,
-  .Acessorios {
-    width: 90%;
-    max-width: 320px;
-  }
-
-  #carrinho {
-    width: 100%;
-    padding: 1rem;
-  }
-
-  .abrir-carrinho,
-  .btn-whatsapp-flutuante,
-  .btn-topo {
-    font-size: 1.1rem;
-    padding: 0.6rem;
-    bottom: 15px;
-  }
-
-  .abrir-carrinho {
-    right: 70px;
-  }
-
-  .btn-whatsapp-flutuante {
-    right: 15px;
-  }
-
-  .btn-topo {
-    right: 125px;
-  }
-
-  nav a {
-    font-size: 1rem;
-  }
-
-  .quantidade-controle {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .btn-fechar-carrinho {
-    font-size: 0.95rem;
-  }
-}
-
 
   #carrinho {
     width: 100%;
@@ -651,6 +584,62 @@ nav a {
 html {
   scroll-behavior: smooth;
 }
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none; /* oculto no desktop */
+}
+
+.menu-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu-links a {
+  text-decoration: none;
+  color: #d32f2f;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* mostra o botão no mobile */
+  }
+
+  .menu-links {
+    display: none; /* esconde o menu padrão */
+    flex-direction: column;
+    background: #fff;
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.15);
+    padding: 1rem;
+    border-radius: 0 0 0 10px;
+  }
+
+  .menu-links.active {
+    display: flex; /* mostra o menu quando ativo */
+  }
+}
 
 </style>
 <!-- Ícone WhatsApp SVG inline para botões -->
@@ -659,6 +648,8 @@ html {
 
   <!-- Menu fixo -->
   <nav>
+    <button class="menu-toggle" aria-label="Abrir menu">≡</button>
+     <div class="menu-links">
     <a href="#Temakis">Temakis</a>
      <a href="#Combos">Combos</a>
       <a href="#Bebidas">Bebidas</a>
@@ -666,6 +657,7 @@ html {
        <a href="#Molhos">Molhos</a>
        <a href="#Acessorios">Acessórios</a>
     <a href="#carrinho" onclick="abrirCarrinho()">Carrinho</a>
+  </div>
   </nav>
 
   <h1 id="produtos" style="text-align:center; margin-bottom:1rem; color:#d32f2f;">Cardápio Sushi Tsuru</h1>
@@ -972,8 +964,20 @@ html {
 
   window.scrollTo({ top, behavior: 'smooth' });
 }
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu-links');
 
+  toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
   </script>
+<script>
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu-links');
 
+  toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+</script>
 </body>
 </html>
